@@ -1,0 +1,5 @@
+<div class="container row">
+    <div class="col-lg-3 recipeHolder" *ngFor="let recipe of recipes">
+        <app-card [id]="recipe.recipe_id" [cardTitle]="recipe.title" [imageSrc]="recipe.image_url" [btnDesc]="'Show More'" (btnEvent)="navigateToRecipe()"></app-card>
+    </div>
+</div>
