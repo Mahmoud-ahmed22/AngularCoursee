@@ -8,6 +8,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class CreateProductComponent implements OnInit{
   profileData:any;
+  success: boolean = false;
 constructor(private fb:FormBuilder) {
   
 }
@@ -22,6 +23,7 @@ ngOnInit(): void {
 submitForm(){
   if (this.profileData.valid) {
     console.log(this.profileData.value);
+    this.success = true;
   }
 };
 
